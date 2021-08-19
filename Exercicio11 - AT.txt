@@ -1,0 +1,58 @@
+private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            double Altura, PesoTotal;
+            string Pontes;
+
+            Altura = Convert.ToDouble(txtAltura.Text);
+            PesoTotal = Convert.ToDouble(txtPeso.Text);
+            Pontes = "";
+
+
+            if (Altura >= 3.00 && Altura <= 3.50)
+            {
+                Pontes = "Affonso Penna";
+               
+            }
+            else
+            {
+                if (Altura >= 3.51 && Altura <= 4.00)
+                {
+                    Pontes = "Hercílio Luz";
+                 
+                }
+
+                else
+                {
+                    if (Altura >= 4.01 && Altura <= 4.50)
+                    {
+                        Pontes = "São Vicente";
+                    }
+                    else
+                    {
+                        if (PesoTotal >= 1000 && PesoTotal <= 1500)
+                        {
+                            Pontes = "Affonso Penna";
+                        }
+                        else
+                        {
+                            if (PesoTotal >= 1501 && PesoTotal <= 2000)
+                            {
+                                Pontes = "Hercílio Luz";
+                            }
+                        
+                            else
+                            {
+                                if (PesoTotal >= 2001 && PesoTotal <= 2500)
+                                {
+                                    Pontes = "São Vicente";
+                                }
+                            }
+                        }
+                        }
+                    }
+                                 MessageBox.Show("A passagem do seu caminhão é permitida na Ponte: " + Pontes);
+            }
+            }
+
+        }
+    }
